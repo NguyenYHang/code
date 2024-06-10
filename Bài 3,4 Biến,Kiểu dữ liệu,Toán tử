@@ -7,3 +7,11 @@ let banKinh = 8
 let dienTich = tinhDienTichHinhTron(banKinh);
 console.log("Diện tích hình tròn là: " + dienTich.toFixed(2));
 //chạy debug:))))))
+//bài4
+function tinhChuViHinhTron(bk) {
+    let chuVi = 2 * Math.PI * bk;
+    return chuVi;}
+let bk = 8
+let chuVi = tinhChuViHinhTron(banKinh);
+console.log("Chu vi hình tròn là: " + chuVi.toFixed(2));
+//bk là bán kính tại lười làm riêng file:))
