@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Homepage</title>
+    <script src="./myFunction.js"></script>
+  </head>
+  <body>
+    <h1>Welcome to my website</h1>
+    <p id="diemvatliLabel">Điểm Vật lí:</p>
+<input type="number" id="diemvatli" />
+<p id="diemsinhhocLabel">Điểm Sinh Học:</p>
+<input type="number" id="diemsinhhoc" />
+    <p id="diemhoahocLabel">Điểm Hóa Học:</p>
+<input type="number" id="diemhoahoc" />
+<button onclick="tinhDiemTrungBinh()">Tính trung bình các môn </button>
+<p id="diemtrungbinh">Điểm trung bình</p>
+    <script>
+        function tinhDiemTrungBinh() {
+            var diemvatli = parseFloat(document.getElementById("diemvatli").value);
+            var diemsinhhoc = parseFloat(document.getElementById("diemsinhhoc").value);
+            var diemhoahoc = parseFloat(document.getElementById("diemhoahoc").value);
+            var diemTrungBinh = (diemvatli + diemsinhhoc + diemhoahoc) / 3;
+            document.getElementById("diemtrungbinh").innerHTML = "Điểm trung bình: " + diemTrungBinh.toFixed(2);
+        }    
+    </script>
+  </body>
+</html>
+    </script>
+  </body>
+</html>
