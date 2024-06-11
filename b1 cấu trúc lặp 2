@@ -1,0 +1,78 @@
+-------index.html
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bảng Cửu Chương</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <h1 style="text-align: center">Bảng Cửu Chương</h1>
+    <div id="table-container" style="text-align: center"></div>
+    <script src="index.js"></script>
+
+    <div class="circle">
+      <div class="text">Nghệ Thuật kkkkk</div>
+    </div>
+  </body>
+</html>
+--------style.css
+table {
+    width: 100%;
+    margin: 30px auto;
+    border-collapse: collapse;
+}
+
+td,
+th {
+    border: 1px solid #dddddd;
+    text-align: center;
+    padding: 20px;
+}
+.circle {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: linear-gradient(to right, violet, indigo, blue, green, yellow, orange, red);
+    background-size: 1400% 100%;
+    animation: rainbow 5s linear infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.text {
+    font-size: 24px;
+    color:yellow;
+    text-align: center;
+    transform: rotate(-90deg);
+}
+
+@keyframes rainbow {
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: 1400% 0;
+    }
+}
+------- index.js
+function BangCuuChuong() {
+    var con = document.getElementById("table-container");
+    var t = document.createElement("table");
+    for (var i = 1; i <= 9; i++) {
+        var r = document.createElement("tr");
+        for (var j = 1; j <= 9; j++) {
+            var so = document.createElement("td");
+            so.textContent = `${i} x ${j} = ${i * j}`; //<= đi hỏi ngta cách làm tốn 3 ngày của em:)))
+            r.appendChild(so);
+        }
+        t.appendChild(r);
+    }
+    con.appendChild(t);
+}
+BangCuuChuong()
